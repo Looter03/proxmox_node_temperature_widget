@@ -419,30 +419,34 @@ __PACKAGE__->register_method({
 			valkey => 'temp1_input',
 			critkey => 'temp1_crit',
 		},
-		pchtemp => {
-			jsonpath => ['pch_cannonlake-virtual-0', 'temp1'],
+		wifitemp => {
+			jsonpath => ['iwlwifi_1-virtual-0', 'temp1'],
 			valkey => 'temp1_input',
 		},
-		nvmetemp => {
-			jsonpath => ['nvme-pci-0100', 'Composite'],
-			valkey => 'temp1_input',
-			critkey => 'temp1_crit',
-		},
-		hd1temp => {
-			jsonpath => ['drivetemp-scsi-0-0', 'temp1'],
+		lantemp => {
+			jsonpath => ['nvme-pci-0200', 'Composite'],
 			valkey => 'temp1_input',
 			critkey => 'temp1_crit',
 		},
-		hd2temp => {
-			jsonpath => ['drivetemp-scsi-1-0', 'temp1'],
+		gputemp => {
+			jsonpath => ['nouveau-pci-0300', 'temp1'],
 			valkey => 'temp1_input',
-			critkey => 'temp1_crit',
 		},
-		hd3temp => {
-			jsonpath => ['drivetemp-scsi-2-0', 'temp1'],
-			valkey => 'temp1_input',
-			critkey => 'temp1_crit',
-		},
+		# hd1temp => {
+		# 	jsonpath => ['drivetemp-scsi-0-0', 'temp1'],
+		# 	valkey => 'temp1_input',
+		# 	critkey => 'temp1_crit',
+		# },
+		# hd2temp => {
+		# 	jsonpath => ['drivetemp-scsi-1-0', 'temp1'],
+		# 	valkey => 'temp1_input',
+		# 	critkey => 'temp1_crit',
+		# },
+		# hd3temp => {
+		# 	jsonpath => ['drivetemp-scsi-2-0', 'temp1'],
+		# 	valkey => 'temp1_input',
+		# 	critkey => 'temp1_crit',
+		# },
 	);
 	my $temp_default_val = 0;
 	my $temp_default_crit = 80;
