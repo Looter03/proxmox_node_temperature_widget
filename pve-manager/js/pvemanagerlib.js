@@ -39312,7 +39312,7 @@ Ext.define('PVE.node.StatusView', {
     extend: 'Proxmox.panel.StatusView',
     alias: 'widget.pveNodeStatus',
 
-    height: 300,
+    height: 420,
     bodyPadding: '15 5 15 5',
 
     layout: {
